@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.example.sustainablesteps.databinding.ActivitySignUpBinding
+import com.example.sustainablesteps.model.UserModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.auth.ktx.auth
@@ -51,9 +52,6 @@ class SignUpActivity : AppCompatActivity() {
             }else{
                 createAccount(email, password)
             }
-
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
         }
     }
 
@@ -61,6 +59,7 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{ task ->
             if(task.isSuccessful){
                 Toast.makeText(this, "Account created Successfully", Toast.LENGTH_SHORT).show()
+                saveUserData()
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -70,5 +69,17 @@ class SignUpActivity : AppCompatActivity() {
                 Log.d("Account", "createAccount: Failure", task.exception)
             }
         }
+    }
+
+    // save data to database
+    private fun saveUserData() {
+        userName = binding.userNameSignin.text.toString().trim()
+        email = binding.emailSignin.text.toString().trim()
+        password = binding.passwordSignin.text.toString().trim()
+        val user = UserModel(userName, email, password, 0)
+        val userId = FirebaseAuth.getInstance().currentUser!!.uid
+        // save user data into Firebase Database
+        database.child("user").child(userId).setValue(user)
+
     }
 }
