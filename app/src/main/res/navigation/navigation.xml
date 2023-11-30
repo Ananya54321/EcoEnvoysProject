@@ -22,9 +22,9 @@
         tools:layout="@layout/fragment_reports" />
     <fragment
         android:id="@+id/leaderboardFragment"
-        android:name="com.example.sustainablesteps.fragment.LeaderboardFragment"
+        android:name="com.example.sustainablesteps.fragment.PointsFragment"
         android:label="fragment_leaderboard"
-        tools:layout="@layout/fragment_leaderboard" />
+        tools:layout="@layout/fragment_points" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.sustainablesteps.fragment.ProfileFragment"

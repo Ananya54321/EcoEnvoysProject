@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.sustainablesteps.R
 
 
-class LeaderboardFragment : Fragment() {
+class PointsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +20,8 @@ class LeaderboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_leaderboard, container, false)
+
+        return inflater.inflate(R.layout.fragment_points, container, false)
     }
 
     companion object {
