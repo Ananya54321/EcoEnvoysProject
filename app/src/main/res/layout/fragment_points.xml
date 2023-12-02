@@ -1,66 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#436dbe"
-    android:scrollbars="none"
-    android:backgroundTint="#436dbe"
-    tools:context=".fragment.PointsFragment">
+    android:layout_margin="0dp"
+    android:backgroundTint="#436dbe" >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/subscriptionCard"
+        android:layout_width="0dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView18">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#436dbe">
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="154dp"
-                android:layout_marginStart="16dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                app:cardCornerRadius="15dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/luckiest_guy"
+                android:text="SUBSCRIPTIONS"
+                android:textColor="#0A49A7"
+                android:textSize="30sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView18">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="See what subscriptions you can \nunlock"
+                app:layout_constraintEnd_toEndOf="@+id/textView22"
+                app:layout_constraintStart_toStartOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="16dp"
-                        android:fontFamily="@font/luckiest_guy"
-                        android:text="SUBSCRIPTIONS"
-                        android:textColor="#0A49A7"
-                        android:textSize="30sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:gravity="center"
-                        android:text="See what subscriptions you can \nunlock"
-                        app:layout_constraintEnd_toEndOf="@+id/textView22"
-                        app:layout_constraintStart_toStartOf="@+id/textView22"
-                        app:layout_constraintTop_toBottomOf="@+id/textView22" />
-
-                    <ImageView
-                        android:id="@+id/imageView22"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginEnd="16dp"
-                        android:src="@drawable/flaginlevelup"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/flaginlevelup"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/leaderboardCard"
@@ -151,7 +148,7 @@
                         android:gravity="center_vertical"
                         android:paddingLeft="30dp"
                         android:text="More info"
-                        android:textSize="25dp"
+                        android:textSize="25sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -398,5 +395,4 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

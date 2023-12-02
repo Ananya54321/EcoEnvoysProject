@@ -1,17 +1,27 @@
 package com.example.sustainablesteps.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.sustainablesteps.CreateEventActivity
+import com.example.sustainablesteps.Leaderboards
 import com.example.sustainablesteps.R
+import com.example.sustainablesteps.SubscriptionsActivity
+import com.example.sustainablesteps.UpcomingEventsActivity
+import com.example.sustainablesteps.databinding.FragmentEventsBinding
+import com.example.sustainablesteps.databinding.FragmentPointsBinding
 
 class EventsFragment : Fragment() {
+
+    private lateinit var binding: FragmentEventsBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
     }
 
@@ -19,10 +29,22 @@ class EventsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_events, container, false)
+
+        binding = FragmentEventsBinding.inflate(inflater, container, false)
+        return binding.root
+
+
     }
 
-    companion object {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.joinEventCard.setOnClickListener {
+            val intent = Intent(requireContext(), UpcomingEventsActivity::class.java)
+            startActivity(intent)
+        }
+        binding.createEventCard.setOnClickListener {
+            val intent = Intent(requireContext(), CreateEventActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

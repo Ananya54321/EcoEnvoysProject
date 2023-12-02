@@ -10,7 +10,7 @@ class Leaderboards : AppCompatActivity() {
     private  val binding: ActivityLeaderboardsBinding by lazy {
         ActivityLeaderboardsBinding.inflate(layoutInflater)
     }
-    private lateinit var buyAgainAdapter: LeaderboardAdapter
+    private lateinit var LeaderboardAdapter: LeaderboardAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)

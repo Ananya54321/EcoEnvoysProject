@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.sustainablesteps.Leaderboards
 import com.example.sustainablesteps.R
+import com.example.sustainablesteps.SubscriptionsActivity
 import com.example.sustainablesteps.databinding.FragmentPointsBinding
 
 
@@ -34,6 +35,10 @@ class PointsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.leaderboardCard.setOnClickListener{
             val intent = Intent(requireContext(), Leaderboards::class.java)
+            startActivity(intent)
+        }
+        binding.subscriptionCard.setOnClickListener{
+            val intent = Intent(requireContext(), SubscriptionsActivity::class.java)
             startActivity(intent)
         }
     }
