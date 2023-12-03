@@ -51,7 +51,7 @@
             android:layout_margin="8dp">
 
             <EditText
-                android:id="@+id/userNameLogin"
+                android:id="@+id/emailLogin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -59,8 +59,8 @@
                 android:layout_marginBottom="8dp"
                 android:background="@android:color/transparent"
                 android:gravity="center_vertical"
-                android:hint="User Name or Phone Number"
-                android:inputType="text"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -146,7 +146,7 @@
         app:srcCompat="@drawable/baserecyclepicture" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/logInButton"
+        android:id="@+id/loginButton"
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:layout_marginStart="16dp"
@@ -173,5 +173,5 @@
         app:layout_constraintBottom_toTopOf="@+id/footerImageLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logInButton" />
+        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
