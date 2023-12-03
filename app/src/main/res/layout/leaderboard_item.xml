@@ -72,7 +72,7 @@
                     android:id="@+id/profileLeaderboards"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/volunteering_banner1" />
+                    android:src="@drawable/profilepicimg" />
             </androidx.cardview.widget.CardView>
 
             <TextView

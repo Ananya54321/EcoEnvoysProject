@@ -7,4 +7,6 @@ data class UserModel(
     val email: String? = null,
     val password: String? = null,
     val current_points: Int = 0
-)
+) {
+    constructor() : this("", "", "", 0)
+}

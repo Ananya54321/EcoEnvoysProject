@@ -3,11 +3,15 @@ package com.example.sustainablesteps.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sustainablesteps.Leaderboards
 import com.example.sustainablesteps.databinding.LeaderboardItemBinding
+import com.example.sustainablesteps.model.UserModel
+import com.google.firebase.database.DatabaseReference
 
-class LeaderboardAdapter(private val leaderboardUserNames : ArrayList<String>, private val LeaderboardUserPoints: ArrayList<String>,
-                                  private val LeaderboardUserLevels: ArrayList<String>, private val LeaderboardProfilePictures: ArrayList<Int>) :
-    RecyclerView.Adapter<LeaderboardAdapter.LeaderboardViewHolder>() {
+class LeaderboardAdapter(private val leaderboardItems: List<UserModel>,
+                         databaseReference: DatabaseReference,
+                         private val context: Leaderboards
+) : RecyclerView.Adapter<LeaderboardAdapter.LeaderboardViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LeaderboardViewHolder {
         val binding = LeaderboardItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -15,18 +19,25 @@ class LeaderboardAdapter(private val leaderboardUserNames : ArrayList<String>, p
     }
 
     override fun onBindViewHolder(holder: LeaderboardViewHolder, position: Int) {
-        holder.bind(leaderboardUserNames[position], LeaderboardUserPoints[position], LeaderboardProfilePictures[position], LeaderboardUserLevels[position])
-
+        holder.bind(position)
     }
 
-    override fun getItemCount(): Int = leaderboardUserNames.size
+    override fun getItemCount(): Int = leaderboardItems.size
 
-    class LeaderboardViewHolder(private val binding: LeaderboardItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(userName: String, userPoints: String, profilePic: Int, userLevel: String) {
-            binding.leaderboardsusername.text = userName
-            binding.leaderboardpointsnumber.text = userPoints + " points"
-            binding.profileLeaderboards.setImageResource(profilePic)
-            binding.leaderboardslevel.text = "Level "+userLevel
+    inner class LeaderboardViewHolder(private val binding: LeaderboardItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(position: Int) {
+
+            val leaderboardItem = leaderboardItems[position]
+
+            binding.apply{
+                leaderboardsusername.text = leaderboardItem.name
+                leaderboardpointsnumber.text = leaderboardItem.current_points.toString() + " points"
+//                profileLeaderboards.setImageResource(profilePic)
+                val rank = (position+1).toString()
+                val level = leaderboardItem.current_points/20 + 1
+                leaderboardslevel.text = "Level " + level.toString()
+                leaderboardusrrank.text = "$rank"
+            }
 
         }
 
