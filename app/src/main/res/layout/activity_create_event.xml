@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/createEventName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -40,8 +40,8 @@
         app:layout_constraintStart_toEndOf="@+id/textView33"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
-    <TextView
-        android:id="@+id/textView29"
+    <EditText
+        android:id="@+id/createEventType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -55,7 +55,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView34"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/createEventName" />
 
     <TextView
         android:id="@+id/textView31"
@@ -70,7 +70,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+        app:layout_constraintTop_toBottomOf="@+id/createEventType" />
 
     <Spinner
         android:id="@+id/event_type_spinner"
@@ -82,7 +82,7 @@
         android:minHeight="48dp"
         android:padding="8dp"
         app:layout_constraintStart_toEndOf="@+id/textView31"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+        app:layout_constraintTop_toBottomOf="@+id/createEventType" />
 
     <TextView
         android:id="@+id/textView32"
@@ -128,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/expectedNumberOfPeople"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -228,7 +228,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/eventVenue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -245,7 +245,7 @@
         app:layout_constraintTop_toTopOf="@+id/textView39" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/eventDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -261,7 +261,7 @@
         android:paddingTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/eventVenue" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/createEventButton"
@@ -273,7 +273,7 @@
         android:text="Create"
         android:textAllCaps="false"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText4"
-        app:layout_constraintStart_toStartOf="@+id/editTextText4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintEnd_toEndOf="@+id/eventDescription"
+        app:layout_constraintStart_toStartOf="@+id/eventDescription"
+        app:layout_constraintTop_toBottomOf="@+id/eventDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>

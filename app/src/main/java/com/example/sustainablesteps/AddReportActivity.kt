@@ -9,6 +9,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.example.sustainablesteps.databinding.ActivityAddReportBinding
 import com.example.sustainablesteps.databinding.ActivityLoginBinding
 import com.example.sustainablesteps.model.AllReports
+import com.example.sustainablesteps.model.UserModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase

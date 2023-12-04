@@ -33,6 +33,8 @@ class Leaderboards : AppCompatActivity() {
 
     }
 
+    // implement user details on the leaderboard
+
     private fun retrieveLeaderboardItems() {
 
         database = FirebaseDatabase.getInstance()

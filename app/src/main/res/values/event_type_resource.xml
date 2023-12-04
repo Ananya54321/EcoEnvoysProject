@@ -3,5 +3,6 @@
     <string-array name="event_types">
         <item>Individual</item>
         <item>Company</item>
+        <item>Gated Communities</item>
     </string-array>
 </resources>
