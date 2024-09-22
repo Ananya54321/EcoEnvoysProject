@@ -4,6 +4,13 @@
 
 **Sustainable Steps** is an Android application aimed at encouraging and promoting sustainable living practices. It empowers users to actively participate in creating a more eco-friendly environment by reporting litter, organizing community activities, and earning points for their contributions. This document provides comprehensive documentation for the app.
 
+## Team Members:
+- [Ananya Pappula](https://github.com/Ananya54321)
+- [Dhruv S Shah](https://github.com/S-Dhruv)
+- [Brinda Gunti](https://github.com/brindagunti)
+- [Rajaram Ramavath](https://github.com/rajaramramavath)
+- [Niharika Kidambi](https://github.com/Niharika-KIDAMBI)
+
 ## Features
 
 ### 1. Add Report ✍️🌍
